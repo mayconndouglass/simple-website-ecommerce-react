@@ -1,3 +1,13 @@
+import { useContext } from 'react'
+
+import { ProductContext } from '../contexts/ProductContext'
+
 export const Home = () => {
-  return <div>Home Page</div>
+  const products = useContext(ProductContext)
+
+  return (
+    <div>
+      Home Page
+    </div>
+  )
 }

@@ -1,3 +1,3 @@
-export const CartItem = () => {
+export const Footer = () => {
   return <div>Footer</div>
 }
