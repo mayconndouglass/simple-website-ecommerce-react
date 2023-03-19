@@ -4,10 +4,11 @@ type ProductProviderPropsType = {
   children: ReactNode
 }
 
-interface ApiDataType {
+export interface ApiDataType {
   category: string
   description: string
   id: number
+  image: string
   price: number
   rating: {
     rate: number
