@@ -1,12 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+
+// Contexts
 import { ProductProvider } from './contexts/ProductContext'
+import { SidebarProvider } from './contexts/SidebarContext'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <ProductProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ProductProvider>
+  <SidebarProvider>
+    <ProductProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </ProductProvider>
+  </SidebarProvider>
 )

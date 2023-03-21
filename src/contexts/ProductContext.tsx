@@ -1,8 +1,6 @@
-import { ReactNode, createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect } from 'react'
 
-type ProductProviderPropsType = {
-  children: ReactNode
-}
+import { ChildrenPropsType } from '../types/children.type'
 
 export interface ApiDataType {
   category: string
@@ -19,7 +17,7 @@ export interface ApiDataType {
 
 export const ProductContext = createContext<ApiDataType[]>([])
 
-export const ProductProvider = ({children}: ProductProviderPropsType) => {
+export const ProductProvider = ({children}: ChildrenPropsType) => {
   const [products, setProducts] = useState([])
   
   useEffect(() => {
