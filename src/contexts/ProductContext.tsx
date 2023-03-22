@@ -1,19 +1,8 @@
 import { createContext, useState, useEffect } from 'react'
 
+// Types
 import { ChildrenPropsType } from '../types/children.type'
-
-export interface ApiDataType {
-  category: string
-  description: string
-  id: number
-  image: string
-  price: number
-  rating: {
-    rate: number
-    count: number
-  }
-  title: string
-}
+import { ApiDataType } from '../types/productData.type'
 
 export const ProductContext = createContext<ApiDataType[]>([])
 

@@ -1,19 +1,34 @@
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+
+// Styles
+import {
+  Container,
+  ProductContainer,
+  ContainerImg,
+  Image,
+  Description,
+  ContainerButton,
+  ContainerICon,
+  Category,
+  Price
+} from './styles'
+
+// Contexts
+import { CartContext } from '../../contexts/CartContext'
 
 // icons
 import { BsPlus, BsEyeFill } from 'react-icons/bs'
 
-// Styles
-import { Container, ProductContainer, ContainerImg, Image, Description, ContainerButton, ContainerICon, Category, Price } from './styles'
-
-// Contexts
-import { ApiDataType } from '../../contexts/ProductContext'
+// Type
+import { ApiDataType } from '../../types/productData.type'
 
 type ProductType = {
   product: ApiDataType
 }
 
 export const Product = ({product}: ProductType) => {
+  const { addToCart } = useContext(CartContext)
   const { id, image, category, title, price } = product
   
   return (
@@ -25,7 +40,7 @@ export const Product = ({product}: ProductType) => {
           </ContainerImg>
 
           <ContainerButton className='containerButton'>
-            <button>
+            <button onClick={() => addToCart(product, id)}>
               <ContainerICon>
                 <BsPlus />
               </ContainerICon>

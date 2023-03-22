@@ -1,17 +1,20 @@
 import { useContext } from 'react'
 import { SidebarContext } from '../../contexts/SidebarContext'
 
+// Styles
+import { ContainerIcon, HeaderContainer } from './styles'
+
 import { BsBag } from 'react-icons/bs'
 
 export const Header = () => {
   const {isOpen, setIsOpen} = useContext(SidebarContext)
 
   return ( 
-    <div>
+    <HeaderContainer>
       <div>Header</div>
-      <div onClick={() => setIsOpen(!isOpen)}>
-        <BsBag />
-      </div>
-    </div>
+      <ContainerIcon onClick={() => setIsOpen(!isOpen)}>
+        <BsBag className='bagIcon' />
+      </ContainerIcon>
+    </HeaderContainer>
   )
 }
