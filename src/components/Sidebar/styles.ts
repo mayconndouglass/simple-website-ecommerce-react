@@ -65,3 +65,42 @@ export const ContainerICon = styled.div`
     line-height: 2rem;
   }
 `
+
+export const ContainerClearIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 0;
+  background-color: #DC2626;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.25rem; 
+  line-height: 1.75rem;
+`
+
+export const ContainerTotal = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const SectionTotal = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0;
+  padding: 16px 0;
+  margin-top: 1rem;
+`
+
+export const Total = styled.div`
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  span {
+    margin-right: 8px;
+  }
+`

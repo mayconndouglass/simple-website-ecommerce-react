@@ -2,7 +2,16 @@ import { useContext } from 'react'
 import { Link } from "react-router-dom"
 
 // styles
-import { ContainerArea, ContainerICon, Container, Title } from './styles'
+import {
+  ContainerArea,
+  ContainerICon,
+  Container,
+  Title,
+  ContainerClearIcon,
+  ContainerTotal,
+  SectionTotal,
+  Total,
+} from './styles'
 
 // Icons
 import { IoMdArrowForward } from 'react-icons/io'
@@ -17,21 +26,35 @@ import { CartContext } from '../../contexts/CartContext'
 
 export const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext)
-  const { cart, addToCart } = useContext(CartContext)
+  const { cart, clearCart } = useContext(CartContext)
   
-  return ( 
+  return (
     <ContainerArea isOpen={isOpen}>
       <Container>
         <Title>Carrinho de Compras (0)</Title>
+
         <ContainerICon onClick={handleClose}>
           <IoMdArrowForward className='icon' />
         </ContainerICon>
       </Container>
+
         <div>
           {cart.map(item => {
             return <CartItem item={item} key={item.id} />
           })}
         </div>
+        
+        <SectionTotal>
+          <ContainerTotal>
+            <Total>
+              <span>Total:</span>R$ 1000
+            </Total>
+
+            <ContainerClearIcon onClick={clearCart}>
+              <FiTrash2 />
+            </ContainerClearIcon>
+          </ContainerTotal>
+        </SectionTotal>
     </ContainerArea>
   )
 }
