@@ -18,6 +18,7 @@ export const ContainerArea = styled.div<statusSideBar>`
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
   padding: 0 35px;
+  z-index: 500;
 
   @media (min-width: 768px) {
     width: 35vw;
@@ -30,7 +31,7 @@ export const ContainerArea = styled.div<statusSideBar>`
   @media (min-width: 1440px) { 
     max-width: 30vw;
     
-    z-index: 20;
+    z-index: 500;
     padding: 0 16px;
   }
 `
@@ -102,5 +103,19 @@ export const Total = styled.div`
 
   span {
     margin-right: 8px;
+  }
+`
+
+export const ContainerItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  height: 520px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-bottom: 1px solid #CCC;
+
+  @media (min-width: 1024px) {
+    height: 640px;
   }
 `

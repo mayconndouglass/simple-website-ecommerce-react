@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from 'react'
-import { CartItem } from '../components/CartItem'
 
 // Types
 import { ChildrenPropsType } from '../types/children.type'
@@ -13,6 +12,7 @@ type CartContextType = {
   increaseAmount: (id: number) => void
   decreaseAmount: (id: number) => void
   itemAmount: number
+  total: number
 }
 
 const initialState = {
@@ -22,7 +22,8 @@ const initialState = {
   clearCart: () => {},
   increaseAmount: () => {},
   decreaseAmount: () => {},
-  itemAmount: 0
+  itemAmount: 0,
+  total: 0,
 }
 
 export const CartContext = createContext<CartContextType>(initialState)
@@ -30,6 +31,25 @@ export const CartContext = createContext<CartContextType>(initialState)
 export const CartProvider = ({ children }: ChildrenPropsType) => {
   const [cart, setCart] = useState<Array<ApiDataType>>([])
   const [itemAmount, setItemAmount] = useState(0)
+  const [total, setTotal] = useState(0)
+  
+  // update Total
+  useEffect(() => {
+    const total = cart.reduce((accumulator, currentItem) => {
+      return accumulator + currentItem.price * currentItem.amount!
+    }, 0)
+    setTotal(total)
+  })
+  
+  // update item amount
+  useEffect(() => {
+    if (cart) {
+      const amount = cart.reduce((accumulator, currentItem) => {
+        return accumulator + currentItem.amount!
+      }, 0)
+      setItemAmount(amount)
+    }
+  }, [cart])
   
   const addToCart = (product: ApiDataType, id: number) => {
     const newItem = { ...product, amount: 1 }
@@ -94,6 +114,7 @@ export const CartProvider = ({ children }: ChildrenPropsType) => {
     increaseAmount,
     decreaseAmount,
     itemAmount,
+    total,
   }
 
   return (

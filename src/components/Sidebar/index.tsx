@@ -11,6 +11,7 @@ import {
   ContainerTotal,
   SectionTotal,
   Total,
+  ContainerItems
 } from './styles'
 
 // Icons
@@ -26,7 +27,7 @@ import { CartContext } from '../../contexts/CartContext'
 
 export const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext)
-  const { cart, clearCart } = useContext(CartContext)
+  const { cart, clearCart, total } = useContext(CartContext)
   
   return (
     <ContainerArea isOpen={isOpen}>
@@ -38,16 +39,16 @@ export const Sidebar = () => {
         </ContainerICon>
       </Container>
 
-        <div>
+        <ContainerItems>
           {cart.map(item => {
             return <CartItem item={item} key={item.id} />
           })}
-        </div>
+        </ContainerItems>
         
         <SectionTotal>
           <ContainerTotal>
             <Total>
-              <span>Total:</span>R$ 1000
+              <span>Total:</span>R$ {total}
             </Total>
 
             <ContainerClearIcon onClick={clearCart}>
