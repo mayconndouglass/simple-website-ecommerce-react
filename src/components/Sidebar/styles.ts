@@ -24,9 +24,6 @@ export const ContainerArea = styled.div<statusSideBar>`
     width: 35vw;
   }
 
- /*  @media (min-width: 1024px) { 
-    
-  } */
 
   @media (min-width: 1440px) { 
     max-width: 30vw;
@@ -94,6 +91,24 @@ export const SectionTotal = styled.div`
   gap: 12px 0;
   padding: 16px 0;
   margin-top: 1rem;
+
+  .viewCart, .checkout {
+    background-color: #D1D5DB;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #2e2e2e;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .checkout {
+    background-color: #404040;
+    color: white;
+  }
 `
 
 export const Total = styled.div`

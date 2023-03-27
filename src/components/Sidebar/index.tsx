@@ -55,6 +55,9 @@ export const Sidebar = () => {
               <FiTrash2 />
             </ContainerClearIcon>
           </ContainerTotal>
+
+          <Link to={'/'} className='viewCart'>Visualizar Carrinho</Link>
+          <Link to={'/'} className='checkout'>Conferir Carrinho</Link>
         </SectionTotal>
     </ContainerArea>
   )

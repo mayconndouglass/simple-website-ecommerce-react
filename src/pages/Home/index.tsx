@@ -7,6 +7,7 @@ import { ProductContext } from '../../contexts/ProductContext'
 
 // Components
 import { Product } from '../../components/Product'
+import { Hero } from '../../components/Hero'
 
 export const Home = () => {
   const products = useContext(ProductContext)
@@ -15,7 +16,9 @@ export const Home = () => {
     category === "men's clothing" || category === "women's clothing")
   
   return (
-    <HomeContainer>
+    <div>
+      <Hero />
+      <HomeContainer>
       <ProductContainer>
         <ProductGrid>
           {filteredProducts.map(product => {
@@ -24,5 +27,6 @@ export const Home = () => {
         </ProductGrid>
       </ProductContainer>
     </HomeContainer>
+    </div>
   )
 }
