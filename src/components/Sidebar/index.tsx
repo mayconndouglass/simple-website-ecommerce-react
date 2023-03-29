@@ -27,12 +27,12 @@ import { CartContext } from '../../contexts/CartContext'
 
 export const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext)
-  const { cart, clearCart, total } = useContext(CartContext)
+  const { cart, clearCart, total, itemAmount } = useContext(CartContext)
   
   return (
     <ContainerArea isOpen={isOpen}>
       <Container>
-        <Title>Carrinho de Compras (0)</Title>
+        <Title>Carrinho de Compras ({itemAmount})</Title>
 
         <ContainerICon onClick={handleClose}>
           <IoMdArrowForward className='icon' />

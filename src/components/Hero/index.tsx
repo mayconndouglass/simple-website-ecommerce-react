@@ -2,7 +2,7 @@ import { BackgroundHero, ContainerHeroContent, ContainerImage, ContainerTitleCon
 import { Link } from 'react-router-dom'
 
 // Images
-import Model from '../../assets/model.png'
+import Model from '../../assets/model.webp'
 
 export const Hero = () => {
   return (
@@ -15,7 +15,7 @@ export const Hero = () => {
 
           <h1>
             Faça das nossas roupas a sua personalidade<br />
-            <span className='span'>MULHERES</span>
+            {/* <span className='span'>MULHERES</span> */}
           </h1>
           
           <Link to={'/'}>

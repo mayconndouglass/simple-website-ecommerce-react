@@ -10,7 +10,7 @@ export const BackgroundHero = styled.section`
 `
 
 export const ContainerHeroContent = styled.div`
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: center;
   max-width: auto;
@@ -19,15 +19,19 @@ export const ContainerHeroContent = styled.div`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   h1 {
-    font-size: 4.4rem;
-    line-height: 1.1;
+    font-size: 5rem;
+    line-height: 1;
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     .span {
       font-weight: 600;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+  }
+
+  @media (min-width: 1440px) {
+    width: 60%;
   }
 
   @media (max-width: 470px) {
@@ -43,7 +47,7 @@ export const ContainerTitleContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  
   .containerSubtitle {
     display: flex;
     align-items: center;
@@ -64,6 +68,10 @@ export const ContainerTitleContent = styled.div`
     font-weight: 600;
     border: 0px solid #404040;
     border-bottom-width: 2px;
+  }
+
+  @media (min-width: 1480px) {
+    max-width: 50%;
   }
 `
 

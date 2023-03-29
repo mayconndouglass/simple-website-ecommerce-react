@@ -15,7 +15,7 @@ type CartContextType = {
   total: number
 }
 
-const initialState = {
+/* const initialState = {
   addToCart: () => {},
   removeFromCart: () => {},
   cart: [],
@@ -24,9 +24,9 @@ const initialState = {
   decreaseAmount: () => {},
   itemAmount: 0,
   total: 0,
-}
+} */
 
-export const CartContext = createContext<CartContextType>(initialState)
+export const CartContext = createContext<CartContextType>({} as CartContextType)
 
 export const CartProvider = ({ children }: ChildrenPropsType) => {
   const [cart, setCart] = useState<Array<ApiDataType>>([])
