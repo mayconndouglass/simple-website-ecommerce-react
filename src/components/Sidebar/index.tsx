@@ -48,7 +48,7 @@ export const Sidebar = () => {
         <SectionTotal>
           <ContainerTotal>
             <Total>
-              <span>Total:</span>R$ {total}
+              <span>Total:</span>R$ {total.toFixed(2)}
             </Total>
 
             <ContainerClearIcon onClick={clearCart}>

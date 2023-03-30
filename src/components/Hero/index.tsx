@@ -15,7 +15,6 @@ export const Hero = () => {
 
           <h1>
             Faça das nossas roupas a sua personalidade<br />
-            {/* <span className='span'>MULHERES</span> */}
           </h1>
           
           <Link to={'/'}>

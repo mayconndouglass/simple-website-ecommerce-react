@@ -7,10 +7,14 @@ export const BackgroundHero = styled.section`
   background-color: #F5E6E0;
   padding-top: 6rem; /* 96px */
   padding-bottom: 6rem; /* 96px */
+
+  @media (max-width: 768px) {
+    height: 550px;
+  }
 `
 
 export const ContainerHeroContent = styled.div`
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: center;
   max-width: auto;

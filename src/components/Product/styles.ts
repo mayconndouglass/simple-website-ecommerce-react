@@ -4,9 +4,12 @@ export const Container = styled.div`
   width: 100%;
   height: 300px;
   margin-bottom: 4px;
-  /* position: relative; */
   border: 1px solid #e4e4e4;
   transition: all;
+
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `
 
 export const ProductContainer = styled.div`
@@ -104,6 +107,7 @@ export const Description = styled.div`
       font-size: 1rem;
       font-weight: 600;
       margin: 0 0 4px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
   }  
 `
