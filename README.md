@@ -62,6 +62,7 @@ Acesse o deploy do projeto por aqui:<br>
 Você pode clonar o repositório através do terminal da sua máquina usando:
 
 ```bash
+# Clone o repositório na sua máquina
 $ git clone https://github.com/mayconndouglass/simple-website-ecommerce-react.git
 
 # Entre na pasta do projeto através do terminal
