@@ -1,7 +1,7 @@
 # Loja Virtual Simples
 <!-- ![Lading Page](./assets/first-image.png) -->
 <div align="center">
-  <img src="./assets/main.png" alt="Imagem LP restaurant" style="width:700px;">
+  <img src="./src/assets/main.png" alt="Imagem LP restaurant" style="width:700px;">
 </div>
 
 <div align="center">
@@ -38,7 +38,7 @@
 ## Layout
 
 <div align="center">
-  <img src="./assets/lojavirtualGif.gif" alt="gif do projeto" style="width:700px;">
+  <img src="./src/assets/lojavirtualGif.gif" alt="gif do projeto" style="width:700px;">
 </div>
 </br>
 
