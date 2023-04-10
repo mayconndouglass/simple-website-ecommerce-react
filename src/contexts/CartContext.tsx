@@ -15,17 +15,6 @@ type CartContextType = {
   total: number
 }
 
-/* const initialState = {
-  addToCart: () => {},
-  removeFromCart: () => {},
-  cart: [],
-  clearCart: () => {},
-  increaseAmount: () => {},
-  decreaseAmount: () => {},
-  itemAmount: 0,
-  total: 0,
-} */
-
 export const CartContext = createContext<CartContextType>({} as CartContextType)
 
 export const CartProvider = ({ children }: ChildrenPropsType) => {

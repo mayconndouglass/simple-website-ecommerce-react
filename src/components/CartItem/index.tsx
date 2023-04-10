@@ -59,7 +59,7 @@ export const CartItem = ({ item }: CartPropsType) => {
               <IoMdRemove />
             </div>
 
-            <div className='amount'>{amount}</div>
+            <div className ='amount'>{amount}</div>
 
             <div onClick={() => increaseAmount(id)} className='addIcon'>
               <IoMdAdd />
